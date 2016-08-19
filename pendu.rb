@@ -22,8 +22,10 @@ while tabsol.include?("_") && error != 12
       lettreindex << i
     end
   end
+  if !mot.include?(lettre)
+    error += 1
+  end
   lettreindex.each {|i| tabsol[i] = lettre}
-  error += 1
 end
 
 puts "Le mot à trouver était"
